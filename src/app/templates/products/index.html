@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+<title>Product</title>
+{% endblock %}
+
+{% block main_content %}
+{% include 'products/sliderimg.html'%}
+{% for p in product %}
+  <h1>{{ p.product_name }}</h1>
+  <img src="{{ p.img.url }}" alt="{{ p.product_name }}" width="200px">
+  <img src="{% static 'img/1.png' %}" alt="1" width="200px">
+  <h1>Help</h1>
+{% endfor %}
+{% endblock %}
+
