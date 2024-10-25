@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouttail.html" %}
 {% load static %}
 
 {% block title %}
@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block main_content %}
-{% include 'products/sliderimg.html'%}
+
+{% comment %} {% include 'products/sliderimg.html'%} {% endcomment %}
 {% for p in product %}
   <h1>{{ p.product_name }}</h1>
   <img src="{{ p.img.url }}" alt="{{ p.product_name }}" width="200px">
